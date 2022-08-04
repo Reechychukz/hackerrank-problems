@@ -31,12 +31,9 @@ function readLine() {
  *  2. INTEGER_ARRAY b
  */
 
-function getTotalX(a, b) {
-    let validCount = 0;
-    
-    for (let x = a[a.length - 1]; x <= b[0]; x++) {
-        if (a.every(int => (x % int == 0))) {
-            if (b.every(int => (int % x == 0))) {
+for (let x = a[a.length - 1]; x <= b[0]; x++) {
+        if (a.every(element => (x % element == 0))) {
+            if (b.every(element => (element % x == 0))) {
                 validCount++;
             }
         }
